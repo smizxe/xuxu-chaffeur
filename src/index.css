@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-cream: #F7F4EF;
-  --color-text-dark: #2C3329;
-  --color-accent-green: #5A6B50;
-  --color-accent-peach: #E8987E;
-  --color-accent-gold: #C5B382;
+  --color-bg-cream: #FBF7F0;
+  --color-text-dark: #3E2723;
+  --color-accent-green: #8B6D51;
+  --color-accent-peach: #DAB66E;
+  --color-accent-gold: #A67C52;
   --color-accent-white: #FFFFFF;
 
   --font-sans: 'Space Grotesk', 'Inter', sans-serif;
@@ -14,11 +14,11 @@
 
 /* Custom CSS Variables and Utilities */
 :root {
-  --bg-cream: #F7F4EF;
-  --text-dark: #2C3329;
-  --accent-green: #5A6B50;
-  --accent-peach: #E8987E;
-  --accent-gold: #C5B382;
+  --bg-cream: #FBF7F0;
+  --text-dark: #3E2723;
+  --accent-green: #8B6D51;
+  --accent-peach: #DAB66E;
+  --accent-gold: #A67C52;
 }
 
 body {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import { LanguageProvider } from './context/LanguageContext';
 import Hero from './components/Hero';
 import MarqueeBanner from './components/MarqueeBanner';
 import BrandStory from './components/BrandStory';
@@ -12,24 +13,26 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="antialiased selection:bg-[#E8987E] selection:text-[#2C3329]">
-      <div className="bg-noise"></div>
+    <LanguageProvider>
+      <div className="antialiased selection:bg-[#DAB66E] selection:text-[#3E2723] overflow-x-hidden w-full relative">
+        <div className="bg-noise"></div>
 
-      <Navbar />
+        <Navbar />
 
-      <main>
-        <Hero />
-        <MarqueeBanner />
-        <BrandStory />
-        <Experiences />
-        <WhyChooseUs />
-        <Gallery />
-        <Testimonials />
-        <Booking />
-      </main>
+        <main>
+          <Hero />
+          <MarqueeBanner />
+          <BrandStory />
+          <Experiences />
+          <WhyChooseUs />
+          <Gallery />
+          <Testimonials />
+          <Booking />
+        </main>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 
