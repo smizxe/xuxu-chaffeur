@@ -1,0 +1,58 @@
+const SHEET_NAME = "Trang tính1"; // CÁI TÊN NÀY CHỊ PHẢI COI Ở DƯỚI GÓC TRÁI GOOGLE SHEET. BẰNG TIẾNG ANH LÀ Sheet1, TIẾNG VIỆT LÀ Trang tính1. Hãy thay đổi nếu bạn đổi tên Sheet.
+const EMAIL_TO = "xuxule779@gmail.com"; // THAY BẰNG EMAIL CỦA BẠN ĐỂ NHẬN THÔNG BÁO
+
+function doPost(e) {
+  try {
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_NAME);
+    if (!sheet) {
+      throw "Không tìm thấy Sheet có tên: " + SHEET_NAME;
+    }
+    
+    // Tự động tạo Header nếu chưa có
+    const expectedHeaders = ['Date', 'Name', 'Email', 'Phone', 'Experience', 'Adults', 'Children', 'JourneyDate', 'Details'];
+    if (sheet.getLastRow() === 0) {
+      sheet.getRange(1, 1, 1, expectedHeaders.length).setValues([expectedHeaders]);
+      sheet.getRange(1, 1, 1, expectedHeaders.length).setFontWeight("bold").setBackground("#FBF7F0");
+    }
+
+    const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+    const nextRow = sheet.getLastRow() + 1;
+    
+    const rowData = [];
+    const timestamp = new Date();
+    
+    // Soạn nội dung Email
+    let emailBody = "Bạn có một yêu cầu đặt xe mới từ Website Xuxu Chauffeur:\n\n";
+    emailBody += "--- THÔNG TIN CHI TIẾT ---\n";
+
+    for (let i = 0; i < expectedHeaders.length; i++) {
+      if (expectedHeaders[i] === 'Date') {
+        rowData[i] = timestamp;
+      } else {
+        const fieldName = expectedHeaders[i];
+        const value = e.parameter[fieldName] || "";
+        rowData[i] = value;
+        emailBody += `${fieldName}: ${value}\n`;
+      }
+    }
+    
+    // Lưu vào Google Sheet
+    sheet.getRange(nextRow, 1, 1, rowData.length).setValues([rowData]);
+    
+    // Gửi Email
+    MailApp.sendEmail({
+      to: EMAIL_TO,
+      subject: "🔴 MỚI: Yêu cầu đặt dịch vụ Xuxu Chauffeur từ " + (e.parameter["Name"] || "Khách Hàng"),
+      body: emailBody
+    });
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'success' }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ 'result': 'error', 'error': String(error) }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}

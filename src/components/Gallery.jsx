@@ -47,9 +47,6 @@ const Gallery = () => {
                             <img src="/images/local_market_experience_1772271476932.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Local market browsing" />
                         </div>
                         <div className="rounded-2xl overflow-hidden border-2 border-[#3E2723] hard-shadow bg-gray-200">
-                            <img src="/images/female_chauffeur_1772269241667.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Happy chauffeur" />
-                        </div>
-                        <div className="rounded-2xl overflow-hidden border-2 border-[#3E2723] hard-shadow bg-gray-200">
                             <img src="/images/bana_hills_1772269361633.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Scenic view" />
                         </div>
                     </div>

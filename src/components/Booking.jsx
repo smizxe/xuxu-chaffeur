@@ -57,10 +57,24 @@ const Booking = () => {
                         {lang === 'EN' ? "Send Request" : "Gửi Yêu Cầu"}
                     </button>
                     <p className="text-sm font-bold text-[#3E2723]/40 mt-2 uppercase tracking-wider">{lang === 'EN' ? "OR BOOK DIRECTLY" : "HOẶC ĐẶT TRỰC TIẾP"}</p>
-                    <a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noreferrer" className="w-full md:w-auto bg-[#25D366] text-[#FFFFFF] px-10 py-4 rounded-xl font-bold text-lg border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-center justify-center gap-3">
-                        <iconify-icon icon="logos:whatsapp-icon" width="24"></iconify-icon>
-                        {lang === 'EN' ? "WhatsApp Us" : "Nhắn Tin Qua WhatsApp"}
-                    </a>
+                    <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+                        <a href="https://wa.me/84905590562" target="_blank" rel="noreferrer" className="w-full md:w-auto bg-[#25D366] text-[#FFFFFF] px-8 py-4 rounded-xl font-bold text-lg border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-center justify-center gap-3">
+                            <iconify-icon icon="logos:whatsapp-icon" width="24"></iconify-icon>
+                            WhatsApp
+                        </a>
+
+                        {/* Facebook Button (Desktop) */}
+                        <a href="https://www.facebook.com/Xu.Vietnam.Hair" target="_blank" rel="noreferrer" className="hidden md:flex w-full md:w-auto bg-[#1877F2] text-[#FFFFFF] px-8 py-4 rounded-xl font-bold text-lg border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all items-center justify-center gap-3">
+                            <iconify-icon icon="logos:facebook" width="24"></iconify-icon>
+                            Facebook
+                        </a>
+
+                        {/* Facebook Button (Mobile) */}
+                        <a href="https://m.facebook.com/Xu.Vietnam.Hair" target="_blank" rel="noreferrer" className="flex md:hidden w-full bg-[#1877F2] text-[#FFFFFF] px-8 py-4 rounded-xl font-bold text-lg border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all items-center justify-center gap-3">
+                            <iconify-icon icon="logos:facebook" width="24"></iconify-icon>
+                            Facebook
+                        </a>
+                    </div>
                     <p className="text-[#8B6D51] font-serif italic font-bold text-center mt-4">
                         {lang === 'EN' ? `"Thank you. We will personally prepare your journey."` : `"Xin cảm ơn. Chúng tôi sẽ tự tay chuẩn bị cho trải nghiệm của bạn."`}
                     </p>
