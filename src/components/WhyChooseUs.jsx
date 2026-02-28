@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
 
                         <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4" data-aos="fade-up" data-aos-delay="500">
                             <div className="bg-[#DAB66E] p-2 rounded-lg text-[#FBF7F0] mt-1">
-                                <iconify-icon icon="solar:steering-wheel-bold" width="24"></iconify-icon>
+                                <iconify-icon icon="mdi:car" width="24"></iconify-icon>
                             </div>
                             <div>
                                 <h4 className="font-bold text-lg">{lang === 'EN' ? "Calm Driving Style" : "Phong Cách Lái Xe Êm Ái"}</h4>
