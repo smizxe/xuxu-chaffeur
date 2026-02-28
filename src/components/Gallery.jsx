@@ -20,10 +20,10 @@ const Gallery = () => {
 
                     <div className="space-y-6">
                         <div className="rounded-2xl overflow-hidden border-2 border-[#2C3329] hard-shadow bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb046eb9?q=80&w=600&auto=format&fit=crop" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Family playing" />
+                            <img src="/images/hero_picnic_1772269228827.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Family playing" />
                         </div>
                         <div className="rounded-2xl overflow-hidden border-2 border-[#2C3329] hard-shadow bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600&auto=format&fit=crop" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Picnic details" />
+                            <img src="/images/picnic_setup_1772269324881.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Picnic details" />
                         </div>
                     </div>
 
@@ -32,19 +32,19 @@ const Gallery = () => {
                             <div className="absolute top-4 right-4 bg-[#E8987E] text-[#2C3329] p-2 rounded-full border-2 border-[#2C3329] rotate-12 z-10">
                                 <iconify-icon icon="solar:camera-bold" width="24"></iconify-icon>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1601614742721-e7cbaac99026?q=80&w=600&auto=format&fit=crop" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Mother and child in nature" />
+                            <img src="/images/mother_child_1772269346232.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Mother and child in nature" />
                         </div>
                         <div className="rounded-2xl overflow-hidden border-2 border-[#2C3329] hard-shadow bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1533227260828-531c6b658d3d?q=80&w=600&auto=format&fit=crop" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="BBQ setup" />
+                            <img src="/images/beach_bbq_1772269260293.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="BBQ setup" />
                         </div>
                     </div>
 
                     <div className="space-y-6">
                         <div className="rounded-2xl overflow-hidden border-2 border-[#2C3329] hard-shadow bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1563214876-0bf1db24dd4e?q=80&w=600&auto=format&fit=crop" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Happy chauffeur" />
+                            <img src="/images/female_chauffeur_1772269241667.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Happy chauffeur" />
                         </div>
                         <div className="rounded-2xl overflow-hidden border-2 border-[#2C3329] hard-shadow bg-gray-200">
-                            <img src="https://images.unsplash.com/photo-1596395819057-7e61884cdef3?q=80&w=600&auto=format&fit=crop" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Scenic view" />
+                            <img src="/images/bana_hills_1772269361633.png" className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700" alt="Scenic view" />
                         </div>
                     </div>
 

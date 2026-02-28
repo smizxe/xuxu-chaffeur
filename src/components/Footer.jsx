@@ -6,8 +6,8 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 <div className="col-span-1 md:col-span-2">
                     <a href="#" className="text-3xl font-black tracking-tighter text-[#F7F4EF] flex items-center gap-2 mb-6 group w-fit">
-                        <span className="w-10 h-10 rounded-lg bg-[#E8987E] text-[#2C3329] border-2 border-[#F7F4EF] flex items-center justify-center font-serif italic text-xl group-hover:rotate-12 transition-transform">X</span>
-                        XUXU Chauffeur
+                        <span className="w-10 h-10 rounded-lg bg-[#E8987E] text-[#2C3329] border-2 border-[#F7F4EF] flex items-center justify-center font-serif italic text-xl group-hover:rotate-12 transition-transform">M</span>
+                        Madam Chaffeur
                     </a>
                     <p className="text-[#C5B382] max-w-sm text-lg font-medium leading-relaxed">
                         Private Nature Journeys with a Woman's Touch. <br />
@@ -38,7 +38,7 @@ const Footer = () => {
             </div>
 
             <div className="max-w-7xl mx-auto pt-8 border-t border-[#F7F4EF]/10 text-center md:text-left flex flex-col md:flex-row justify-between text-[#C5B382] text-sm font-medium">
-                <p>© 2026 Xuxu Chauffeur.</p>
+                <p>© 2026 Madam Chaffeur.</p>
                 <p className="flex items-center gap-2 justify-center md:justify-end mt-4 md:mt-0">
                     Crafted with <iconify-icon icon="solar:heart-bold" className="text-[#E8987E]"></iconify-icon> for Families.
                 </p>

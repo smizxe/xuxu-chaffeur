@@ -13,8 +13,8 @@ const Navbar = () => {
             <div className="bg-[#F7F4EF]/90 backdrop-blur-md hard-shadow rounded-full px-2 py-2 flex items-center gap-2 max-w-2xl w-full justify-between transition-all">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-3 bg-[#2C3329] text-[#F7F4EF] px-4 py-2 rounded-full hover:bg-[#E8987E] transition-colors group">
-                    <span className="font-serif italic font-bold text-xl group-hover:rotate-12 transition-transform block">X</span>
-                    <span className="font-bold tracking-tight text-sm">XUXU</span>
+                    <span className="font-serif italic font-bold text-xl group-hover:rotate-12 transition-transform block">M</span>
+                    <span className="font-bold tracking-tight text-sm">Madam Chaffeur</span>
                 </a>
 
                 {/* Navigation Links */}

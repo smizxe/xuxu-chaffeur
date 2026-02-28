@@ -5,7 +5,7 @@ const Hero = () => {
         <header className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 overflow-hidden">
             {/* Decorative Text Behind */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 opacity-[0.03] select-none pointer-events-none">
-                <span className="text-[20vw] leading-none font-bold text-[#5A6B50]">XUXU</span>
+                <span className="text-[20vw] leading-none font-bold text-[#5A6B50]">MADAM</span>
             </div>
 
             <div className="relative z-10 text-center max-w-6xl mx-auto px-6 flex flex-col items-center">
@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="absolute bottom-20 left-10 md:left-20 animate-float hidden lg:block z-20">
                 <div className="bg-[#FFFFFF] p-2 pb-6 rounded-lg hard-shadow-sm rotate-[-6deg] w-48">
                     <div className="bg-[#5A6B50] h-40 rounded mb-2 flex items-center justify-center overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb046eb9?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover grayscale mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" alt="Family Picnic" />
+                        <img src="/images/hero_picnic_1772269228827.png" className="w-full h-full object-cover grayscale mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" alt="Family Picnic" />
                     </div>
                     <div className="font-serif italic text-center text-sm font-bold text-[#2C3329]">Family Picnic</div>
                 </div>

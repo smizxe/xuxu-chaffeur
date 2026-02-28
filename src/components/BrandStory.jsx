@@ -39,11 +39,11 @@ const BrandStory = () => {
                     <div className="absolute inset-0 flex items-center justify-center">
                         {/* Left Shape */}
                         <div className="w-64 h-80 bg-[#5A6B50] rounded-t-full rounded-b-full absolute left-4 md:left-10 top-0 opacity-90 animate-float z-10 border-4 border-[#F7F4EF] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1473186578172-c141e6798cf4?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover opacity-80 mix-blend-overlay" alt="Picnic setup" />
+                            <img src="/images/picnic_setup_1772269324881.png" className="w-full h-full object-cover opacity-80 mix-blend-overlay" alt="Picnic setup" />
                         </div>
                         {/* Right Shape */}
                         <div className="w-64 h-80 bg-[#E8987E] rounded-t-full rounded-b-full absolute right-4 md:right-10 bottom-0 opacity-90 animate-float-delayed z-10 border-4 border-[#F7F4EF] overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1490264101880-928929e37ce7?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover opacity-80 mix-blend-overlay" alt="Mother and child" />
+                            <img src="/images/mother_child_1772269346232.png" className="w-full h-full object-cover opacity-80 mix-blend-overlay" alt="Mother and child" />
                         </div>
 
                         {/* Center overlap badge */}

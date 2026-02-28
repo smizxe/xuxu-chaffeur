@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
                 {/* Left: Soft Photo */}
                 <div className="relative group perspective-1000">
                     <div className="w-full aspect-[4/5] bg-gray-200 rounded-2xl border-4 border-[#2C3329] overflow-hidden hard-shadow transform group-hover:-rotate-2 transition-all duration-500">
-                        <img src="https://images.unsplash.com/photo-1563214876-0bf1db24dd4e?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover" alt="Friendly female driver" />
+                        <img src="/images/female_chauffeur_1772269241667.png" className="w-full h-full object-cover" alt="Friendly female driver" />
                         {/* Gradient overlay at bottom for text readability if needed */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#2C3329]/60 to-transparent flex items-end p-8">
                             <p className="font-serif italic text-2xl text-[#F7F4EF]">Confidence with warmth.</p>

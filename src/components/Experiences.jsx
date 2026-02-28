@@ -26,7 +26,7 @@ const Experiences = () => {
                 <div className="flex-shrink-0 snap-center relative group">
                     <div className="w-[300px] md:w-[400px] bg-[#F7F4EF] p-3 pb-8 rounded-lg rotate-2 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#2C3329] flex items-center justify-center relative overflow-hidden mb-4">
-                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb046eb9?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Family Picnic Escape" />
+                            <img src="/images/hero_picnic_1772269228827.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Family Picnic Escape" />
                             <div className="absolute top-3 left-3 bg-[#F7F4EF] text-[#2C3329] px-2 py-1 rounded text-xs font-bold border border-[#2C3329]">Private Only</div>
                         </div>
                         <h3 className="font-serif italic font-bold text-2xl text-[#2C3329]">Family Picnic Escape</h3>
@@ -42,7 +42,7 @@ const Experiences = () => {
                 <div className="flex-shrink-0 snap-center relative group mt-8">
                     <div className="w-[300px] md:w-[400px] bg-[#F7F4EF] p-3 pb-8 rounded-lg -rotate-3 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#2C3329] flex items-center justify-center relative overflow-hidden mb-4">
-                            <img src="https://images.unsplash.com/photo-1533227260828-531c6b658d3d?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Beach BBQ Sunset" />
+                            <img src="/images/beach_bbq_1772269260293.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Beach BBQ Sunset" />
                             <div className="absolute top-3 left-3 bg-[#F7F4EF] text-[#2C3329] px-2 py-1 rounded text-xs font-bold border border-[#2C3329]">Private Only</div>
                         </div>
                         <h3 className="font-serif italic font-bold text-2xl text-[#2C3329]">Beach BBQ Sunset</h3>
@@ -58,7 +58,7 @@ const Experiences = () => {
                 <div className="flex-shrink-0 snap-center relative group">
                     <div className="w-[300px] md:w-[400px] bg-[#F7F4EF] p-3 pb-8 rounded-lg rotate-1 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#2C3329] flex items-center justify-center relative overflow-hidden mb-4">
-                            <img src="https://images.unsplash.com/photo-1555529902-52611456346b?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hoi An Slow Discovery" />
+                            <img src="/images/hoi_an_stroll_1772269277669.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hoi An Slow Discovery" />
                             <div className="absolute top-3 left-3 bg-[#F7F4EF] text-[#2C3329] px-2 py-1 rounded text-xs font-bold border border-[#2C3329]">Private Only</div>
                         </div>
                         <h3 className="font-serif italic font-bold text-2xl text-[#2C3329]">Hoi An Slow Discovery</h3>
@@ -74,7 +74,7 @@ const Experiences = () => {
                 <div className="flex-shrink-0 snap-center relative group mt-6">
                     <div className="w-[300px] md:w-[400px] bg-[#F7F4EF] p-3 pb-8 rounded-lg -rotate-2 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#2C3329] flex items-center justify-center relative overflow-hidden mb-4">
-                            <img src="https://images.unsplash.com/photo-1596395819057-7e61884cdef3?q=80&w=800&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ba Na Hills Family Day" />
+                            <img src="/images/bana_hills_1772269361633.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ba Na Hills Family Day" />
                             <div className="absolute top-3 left-3 bg-[#F7F4EF] text-[#2C3329] px-2 py-1 rounded text-xs font-bold border border-[#2C3329]">Private Only</div>
                         </div>
                         <h3 className="font-serif italic font-bold text-2xl text-[#2C3329]">Ba Na Hills Family Day</h3>
