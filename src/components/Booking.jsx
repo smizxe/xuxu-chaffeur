@@ -1,8 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyfhTzDEZXLPDyM3fhn_KMQ0cpTIF5T185qwoDiwLvWOuggNgMJcWVE_8KTTH1hHfuQTA/exec";
 
 const Booking = () => {
     const { lang } = useLanguage();
+    const [submitting, setSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
+    const [submitError, setSubmitError] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmitting(true);
+        setSubmitSuccess(false);
+        setSubmitError(false);
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => {
+                setSubmitting(false);
+                setSubmitSuccess(true);
+                form.reset();
+                // Automatically clear success message after a few seconds
+                setTimeout(() => setSubmitSuccess(false), 5000);
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                setSubmitting(false);
+                setSubmitError(true);
+                setTimeout(() => setSubmitError(false), 5000);
+            });
+    };
 
     return (
         <section id="booking" className="py-32 px-6 relative overflow-hidden bg-[#FBF7F0] border-t-4 border-[#3E2723]">
@@ -26,36 +59,50 @@ const Booking = () => {
                     </p>
                 </div>
 
-                <form className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                    <input type="text" placeholder={lang === 'EN' ? "Full Name" : "Họ và Tên"} className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all" />
-                    <input type="email" placeholder={lang === 'EN' ? "Email Address" : "Địa Chỉ Email"} className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all" />
+                <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <input name="Name" required type="text" placeholder={lang === 'EN' ? "Full Name" : "Họ và Tên"} className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all" />
+                    <input name="Email" required type="email" placeholder={lang === 'EN' ? "Email Address" : "Địa Chỉ Email"} className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all" />
 
-                    <input type="tel" placeholder={lang === 'EN' ? "WhatsApp / Phone" : "WhatsApp / Số Điện Thoại"} className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all" />
+                    <input name="Phone" required type="tel" placeholder={lang === 'EN' ? "WhatsApp / Phone" : "WhatsApp / Số Điện Thoại"} className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all" />
 
-                    <select className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all appearance-none cursor-pointer">
-                        <option value="" disabled selected>{lang === 'EN' ? "Select Experience" : "Chọn Trải Nghiệm"}</option>
-                        <option value="picnic">{lang === 'EN' ? "Family Picnic Escape" : "Picnic Gia Đình"}</option>
-                        <option value="bbq">{lang === 'EN' ? "Beach BBQ Sunset" : "BBQ Hoàng Hôn Bãi Biển"}</option>
-                        <option value="hoian">{lang === 'EN' ? "Hoi An Slow Discovery" : "Phố Cổ Hội An"}</option>
-                        <option value="bana">{lang === 'EN' ? "Ba Na Hills Family Day" : "Gia Đình Khám Phá Bà Nà"}</option>
-                        <option value="market">{lang === 'EN' ? "Local Market Discovery" : "Khám Phá Chợ Địa Phường"}</option>
-                        <option value="custom">{lang === 'EN' ? "Custom Request" : "Yêu Cầu Riêng"}</option>
+                    <select name="Experience" required defaultValue="" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all appearance-none cursor-pointer">
+                        <option value="" disabled>{lang === 'EN' ? "Select Experience" : "Chọn Trải Nghiệm"}</option>
+                        <option value="Family Picnic Escape">{lang === 'EN' ? "Family Picnic Escape" : "Picnic Gia Đình"}</option>
+                        <option value="Beach BBQ Sunset">{lang === 'EN' ? "Beach BBQ Sunset" : "BBQ Hoàng Hôn Bãi Biển"}</option>
+                        <option value="Hoi An Slow Discovery">{lang === 'EN' ? "Hoi An Slow Discovery" : "Phố Cổ Hội An"}</option>
+                        <option value="Ba Na Hills Family Day">{lang === 'EN' ? "Ba Na Hills Family Day" : "Gia Đình Khám Phá Bà Nà"}</option>
+                        <option value="Local Market Discovery">{lang === 'EN' ? "Local Market Discovery" : "Khám Phá Chợ Địa Phường"}</option>
+                        <option value="Custom Request">{lang === 'EN' ? "Custom Request" : "Yêu Cầu Riêng"}</option>
                     </select>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <input type="number" placeholder={lang === 'EN' ? "Adults" : "Người Lớn"} min="1" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all" />
-                        <input type="number" placeholder={lang === 'EN' ? "Children" : "Trẻ Em"} min="0" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all" />
+                        <input name="Adults" required type="number" placeholder={lang === 'EN' ? "Adults" : "Người Lớn"} min="1" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all" />
+                        <input name="Children" required type="number" placeholder={lang === 'EN' ? "Children" : "Trẻ Em"} min="0" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all" />
                     </div>
 
-                    <input type="date" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all" />
+                    <input name="JourneyDate" required type="date" className="bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] font-bold transition-all" />
 
-                    <textarea placeholder={lang === 'EN' ? "Any special requests or details about the children?" : "Bất kỳ yêu cầu đặc biệt nào hoặc chi tiết về em bé?"} rows="3" className="md:col-span-2 bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all resize-none"></textarea>
+                    <textarea name="Details" placeholder={lang === 'EN' ? "Any special requests or details about the children?" : "Bất kỳ yêu cầu đặc biệt nào hoặc chi tiết về em bé?"} rows="3" className="md:col-span-2 bg-[#FBF7F0] border-2 border-[#3E2723] rounded-xl px-4 py-3 outline-none focus:ring-4 focus:ring-[#A67C52]/50 text-[#3E2723] placeholder-[#3E2723]/50 font-bold transition-all resize-none"></textarea>
+
+                    <div className="md:col-span-2 flex flex-col items-center gap-4 mt-4">
+                        <button disabled={submitting} type="submit" className="bg-[#3E2723] text-[#FBF7F0] px-10 py-4 w-full md:w-auto rounded-xl font-bold text-lg hover:bg-[#8B6D51] transition-colors shadow-[4px_4px_0px_0px_#A67C52] hover:shadow-[2px_2px_0px_0px_#A67C52] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed">
+                            {submitting ? (lang === 'EN' ? "Sending..." : "Đang gửi...") : (lang === 'EN' ? "Send Request" : "Gửi Yêu Cầu")}
+                        </button>
+
+                        {submitSuccess && (
+                            <p className="text-sm font-bold text-[#25D366] bg-[#25D366]/10 px-4 py-2 rounded-lg">
+                                {lang === 'EN' ? "Your request has been sent successfully!" : "Yêu cầu của bạn đã được gửi thành công!"}
+                            </p>
+                        )}
+                        {submitError && (
+                            <p className="text-sm font-bold text-red-500 bg-red-500/10 px-4 py-2 rounded-lg">
+                                {lang === 'EN' ? "There was an error sending your request. Please try again." : "Có lỗi xảy ra. Vui lòng thử lại sau."}
+                            </p>
+                        )}
+                    </div>
                 </form>
 
                 <div className="flex flex-col items-center gap-4">
-                    <button type="button" className="bg-[#3E2723] text-[#FBF7F0] px-10 py-4 w-full md:w-auto rounded-xl font-bold text-lg hover:bg-[#8B6D51] transition-colors shadow-[4px_4px_0px_0px_#A67C52] hover:shadow-[2px_2px_0px_0px_#A67C52] hover:translate-x-[2px] hover:translate-y-[2px] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none flex items-center justify-center gap-2">
-                        {lang === 'EN' ? "Send Request" : "Gửi Yêu Cầu"}
-                    </button>
                     <p className="text-sm font-bold text-[#3E2723]/40 mt-2 uppercase tracking-wider">{lang === 'EN' ? "OR BOOK DIRECTLY" : "HOẶC ĐẶT TRỰC TIẾP"}</p>
                     <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                         <a href="https://wa.me/84905590562" target="_blank" rel="noreferrer" className="w-full md:w-auto bg-[#25D366] text-[#FFFFFF] px-8 py-4 rounded-xl font-bold text-lg border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-center justify-center gap-3">
