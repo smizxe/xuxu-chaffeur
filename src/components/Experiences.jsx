@@ -89,6 +89,22 @@ const Experiences = () => {
                     </div>
                 </div>
 
+                {/* Card 5 - Local Market */}
+                <div className="flex-shrink-0 snap-center relative group">
+                    <div className="w-[300px] md:w-[400px] bg-[#FBF7F0] p-3 pb-8 rounded-lg rotate-1 hard-shadow group-hover:rotate-0 transition-transform duration-300">
+                        <div className="bg-black w-full h-[250px] rounded border border-[#3E2723] flex items-center justify-center relative overflow-hidden mb-4">
+                            <img src="/images/local_market_experience_1772271476932.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Local Market Discovery" />
+                            <div className="absolute top-3 left-3 bg-[#FBF7F0] text-[#3E2723] px-2 py-1 rounded text-xs font-bold border border-[#3E2723]">{lang === 'EN' ? "Private Only" : "Riêng Tư"}</div>
+                        </div>
+                        <h3 className="font-serif italic font-bold text-2xl text-[#3E2723]">{lang === 'EN' ? "Local Market Discovery" : "Khám Phá Chợ Địa Phương"}</h3>
+                        <p className="text-sm font-medium mt-2 text-[#3E2723]/80 mb-4">{lang === 'EN' ? "Dive into the vibrant local culture with a guided tour of an authentic Vietnamese market. Handpick fresh ingredients and learn about regional specialties." : "Hòa mình vào văn hóa bản địa nhộn nhịp cùng một vòng quanh khu chợ truyền thống. Tận tay chọn lựa nguyên liệu tươi ngon và tìm hiểu đặc sản vùng miền."}</p>
+                        <div className="flex justify-between items-center text-sm">
+                            <span className="font-bold flex items-center gap-1"><iconify-icon icon="solar:clock-circle-bold" className="text-[#8B6D51]"></iconify-icon> {lang === 'EN' ? "3 Hours" : "3 Tiếng"}</span>
+                            <button className="bg-[#3E2723] text-[#FBF7F0] px-4 py-1.5 rounded-full hover:bg-[#DAB66E] transition-colors">{lang === 'EN' ? "View Details" : "Chi Tiết"}</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     );

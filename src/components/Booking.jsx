@@ -38,6 +38,7 @@ const Booking = () => {
                         <option value="bbq">{lang === 'EN' ? "Beach BBQ Sunset" : "BBQ Hoàng Hôn Bãi Biển"}</option>
                         <option value="hoian">{lang === 'EN' ? "Hoi An Slow Discovery" : "Phố Cổ Hội An"}</option>
                         <option value="bana">{lang === 'EN' ? "Ba Na Hills Family Day" : "Gia Đình Khám Phá Bà Nà"}</option>
+                        <option value="market">{lang === 'EN' ? "Local Market Discovery" : "Khám Phá Chợ Địa Phường"}</option>
                         <option value="custom">{lang === 'EN' ? "Custom Request" : "Yêu Cầu Riêng"}</option>
                     </select>
 
