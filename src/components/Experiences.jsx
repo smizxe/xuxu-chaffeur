@@ -42,11 +42,11 @@ const Experiences = () => {
         <section id="experiences" className="py-20 bg-[#3E2723] overflow-hidden relative border-t-4 border-[#FBF7F0]">
 
             <div className="flex justify-between items-end px-6 md:px-12 max-w-7xl mx-auto mb-12">
-                <div>
+                <div data-aos="fade-right">
                     <h2 className="text-4xl md:text-5xl font-black text-[#FBF7F0]">{lang === 'EN' ? "The Experiences" : "Góc Trải Nghiệm"}</h2>
                     <p className="text-[#A67C52] mt-2 font-serif italic text-xl">{lang === 'EN' ? "Private. Unhurried. Breathtaking." : "Tuyệt Mật. An Nhiên. Dành Cho Bạn."}</p>
                 </div>
-                <div className="hidden md:flex gap-2">
+                <div className="hidden md:flex gap-2" data-aos="fade-left" data-aos-delay="200">
                     <button
                         onClick={() => scroll('left')}
                         className="w-12 h-12 rounded-full border-2 border-[#FBF7F0] text-[#FBF7F0] flex items-center justify-center hover:bg-[#8B6D51] hover:text-[#FFFFFF] transition-colors"
@@ -73,7 +73,7 @@ const Experiences = () => {
             >
 
                 {/* Card 1 */}
-                <div className="flex-shrink-0 snap-center relative group">
+                <div className="flex-shrink-0 snap-center relative group" data-aos="fade-up" data-aos-delay="300">
                     <div className="w-[300px] md:w-[400px] bg-[#FBF7F0] p-3 pb-8 rounded-lg rotate-2 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#3E2723] flex items-center justify-center relative overflow-hidden mb-4">
                             <img draggable="false" src="/images/hero_picnic_1772269228827.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Family Picnic Escape" />
@@ -89,7 +89,7 @@ const Experiences = () => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="flex-shrink-0 snap-center relative group mt-8">
+                <div className="flex-shrink-0 snap-center relative group mt-8" data-aos="fade-up" data-aos-delay="400">
                     <div className="w-[300px] md:w-[400px] bg-[#FBF7F0] p-3 pb-8 rounded-lg -rotate-3 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#3E2723] flex items-center justify-center relative overflow-hidden mb-4">
                             <img draggable="false" src="/images/beach_bbq_1772269260293.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Beach BBQ Sunset" />
@@ -105,7 +105,7 @@ const Experiences = () => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="flex-shrink-0 snap-center relative group">
+                <div className="flex-shrink-0 snap-center relative group" data-aos="fade-up" data-aos-delay="500">
                     <div className="w-[300px] md:w-[400px] bg-[#FBF7F0] p-3 pb-8 rounded-lg rotate-1 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#3E2723] flex items-center justify-center relative overflow-hidden mb-4">
                             <img draggable="false" src="/images/hoi_an_stroll_1772269277669.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hoi An Slow Discovery" />
@@ -121,7 +121,7 @@ const Experiences = () => {
                 </div>
 
                 {/* Card 4 */}
-                <div className="flex-shrink-0 snap-center relative group mt-6">
+                <div className="flex-shrink-0 snap-center relative group mt-6" data-aos="fade-up" data-aos-delay="600">
                     <div className="w-[300px] md:w-[400px] bg-[#FBF7F0] p-3 pb-8 rounded-lg -rotate-2 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#3E2723] flex items-center justify-center relative overflow-hidden mb-4">
                             <img draggable="false" src="/images/bana_hills_1772269361633.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ba Na Hills Family Day" />
@@ -137,7 +137,7 @@ const Experiences = () => {
                 </div>
 
                 {/* Card 5 - Local Market */}
-                <div className="flex-shrink-0 snap-center relative group">
+                <div className="flex-shrink-0 snap-center relative group" data-aos="fade-up" data-aos-delay="700">
                     <div className="w-[300px] md:w-[400px] bg-[#FBF7F0] p-3 pb-8 rounded-lg rotate-1 hard-shadow group-hover:rotate-0 transition-transform duration-300">
                         <div className="bg-black w-full h-[250px] rounded border border-[#3E2723] flex items-center justify-center relative overflow-hidden mb-4">
                             <img draggable="false" src="/images/local_market_experience_1772271476932.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Local Market Discovery" />

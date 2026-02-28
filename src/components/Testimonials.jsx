@@ -9,7 +9,7 @@ const Testimonials = () => {
             {/* Background Noise for texture */}
             <div className="absolute inset-0 bg-[#000000] opacity-[0.03] mix-blend-overlay pointer-events-none"></div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10 text-center mb-16">
+            <div className="max-w-7xl mx-auto px-6 relative z-10 text-center mb-16" data-aos="fade-down">
                 <h2 className="text-5xl md:text-6xl font-black tracking-tight text-[#3E2723] mb-4">
                     {lang === 'EN' ? "Words of " : "Lời Tựa "}<span className="font-serif italic text-[#FBF7F0]">{lang === 'EN' ? "Love" : "Yêu Thương"}</span>
                 </h2>
@@ -18,7 +18,7 @@ const Testimonials = () => {
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 {/* Review 1 */}
-                <div className="bg-[#FBF7F0] p-8 rounded-2xl border-4 border-[#3E2723] hard-shadow transform rotate-1 hover:rotate-0 transition-transform">
+                <div className="bg-[#FBF7F0] p-8 rounded-2xl border-4 border-[#3E2723] hard-shadow transform rotate-1 hover:rotate-0 transition-transform" data-aos="fade-up" data-aos-delay="200">
                     <div className="flex gap-1 text-[#DAB66E] mb-4">
                         <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
                         <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
@@ -39,7 +39,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Review 2 */}
-                <div className="bg-[#FBF7F0] p-8 rounded-2xl border-4 border-[#3E2723] hard-shadow-sm transform -rotate-2 hover:rotate-0 transition-transform">
+                <div className="bg-[#FBF7F0] p-8 rounded-2xl border-4 border-[#3E2723] hard-shadow-sm transform -rotate-2 hover:rotate-0 transition-transform" data-aos="fade-up" data-aos-delay="400">
                     <div className="flex gap-1 text-[#DAB66E] mb-4">
                         <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
                         <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
@@ -60,7 +60,7 @@ const Testimonials = () => {
                 </div>
 
                 {/* Review 3 */}
-                <div className="bg-[#FBF7F0] p-8 rounded-2xl border-4 border-[#3E2723] hard-shadow transform rotate-2 hover:rotate-0 transition-transform">
+                <div className="bg-[#FBF7F0] p-8 rounded-2xl border-4 border-[#3E2723] hard-shadow transform rotate-2 hover:rotate-0 transition-transform" data-aos="fade-up" data-aos-delay="600">
                     <div className="flex gap-1 text-[#DAB66E] mb-4">
                         <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>
                         <iconify-icon icon="solar:star-bold" width="20"></iconify-icon>

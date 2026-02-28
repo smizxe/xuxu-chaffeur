@@ -5,7 +5,7 @@ const Navbar = () => {
     const { lang, toggleLang } = useLanguage();
 
     return (
-        <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
+        <nav className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4" data-aos="fade-down" data-aos-duration="1200">
             <div className="bg-[#FBF7F0]/90 backdrop-blur-md hard-shadow rounded-full px-2 py-2 flex items-center gap-2 max-w-2xl w-full justify-between transition-all">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-3 bg-[#3E2723] text-[#FBF7F0] px-4 py-2 rounded-full hover:bg-[#DAB66E] transition-colors group">

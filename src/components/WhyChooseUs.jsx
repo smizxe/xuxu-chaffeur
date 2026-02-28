@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
 
                 {/* Left: Soft Photo */}
-                <div className="relative group perspective-1000">
+                <div className="relative group perspective-1000" data-aos="fade-right">
                     <div className="w-full aspect-[4/5] bg-gray-200 rounded-2xl border-4 border-[#3E2723] overflow-hidden hard-shadow transform group-hover:-rotate-2 transition-all duration-500">
                         <img src="/images/female_chauffeur_1772269241667.png" className="w-full h-full object-cover" alt="Friendly female driver" />
                         {/* Gradient overlay at bottom for text readability if needed */}
@@ -25,7 +25,7 @@ const WhyChooseUs = () => {
                 </div>
 
                 {/* Right: Bullet Points */}
-                <div>
+                <div data-aos="fade-left" data-aos-delay="200">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[#3E2723] bg-[#FBF7F0] text-[#3E2723] text-sm font-bold mb-8 shadow-[4px_4px_0px_0px_#3E2723]">
                         <iconify-icon icon="solar:shield-star-bold" width="16" className="text-[#8B6D51]"></iconify-icon>
                         {lang === 'EN' ? "WHY A FEMALE CHAUFFEUR?" : "TẠI SAO LẠI CHỌN NỮ TÀI XẾ?"}
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
                     </h2>
 
                     <div className="space-y-6">
-                        <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4">
+                        <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4" data-aos="fade-up" data-aos-delay="400">
                             <div className="bg-[#8B6D51] p-2 rounded-lg text-[#FBF7F0] mt-1">
                                 <iconify-icon icon="solar:heart-angle-bold" width="24"></iconify-icon>
                             </div>
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4">
+                        <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4" data-aos="fade-up" data-aos-delay="500">
                             <div className="bg-[#DAB66E] p-2 rounded-lg text-[#FBF7F0] mt-1">
                                 <iconify-icon icon="solar:steering-wheel-bold" width="24"></iconify-icon>
                             </div>
@@ -56,7 +56,7 @@ const WhyChooseUs = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4">
+                        <div className="bg-white px-6 py-5 rounded-xl border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#3E2723] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#3E2723] transition-all flex items-start gap-4" data-aos="fade-up" data-aos-delay="600">
                             <div className="bg-[#A67C52] p-2 rounded-lg text-[#3E2723] mt-1">
                                 <iconify-icon icon="solar:chat-round-line-bold" width="24"></iconify-icon>
                             </div>

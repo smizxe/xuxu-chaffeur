@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className="bg-[#3E2723] text-[#FBF7F0] pt-20 pb-10 px-6 border-t-4 border-[#A67C52]">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                <div className="col-span-1 md:col-span-2">
+                <div className="col-span-1 md:col-span-2" data-aos="fade-up" data-aos-delay="200">
                     <a href="#" className="text-3xl font-black tracking-tighter text-[#FBF7F0] flex items-center gap-2 mb-6 group w-fit">
                         <span className="w-10 h-10 rounded-lg bg-[#DAB66E] text-[#3E2723] border-2 border-[#FBF7F0] flex items-center justify-center font-serif italic text-xl group-hover:rotate-12 transition-transform">M</span>
                         Madam Chaffeur
@@ -18,7 +18,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                <div>
+                <div data-aos="fade-up" data-aos-delay="400">
                     <h4 className="text-[#DAB66E] font-bold mb-6 uppercase tracking-wider text-sm border-b-2 border-[#DAB66E]/30 pb-2 w-fit">
                         {lang === 'EN' ? "Navigation" : "Chỉ Dẫn"}
                     </h4>
@@ -29,7 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div>
+                <div data-aos="fade-up" data-aos-delay="600">
                     <h4 className="text-[#DAB66E] font-bold mb-6 uppercase tracking-wider text-sm border-b-2 border-[#DAB66E]/30 pb-2 w-fit">Socials</h4>
                     <div className="flex gap-4">
                         <a href="#" className="w-12 h-12 rounded-xl bg-[#FBF7F0]/10 border-2 border-[#FBF7F0]/20 flex items-center justify-center hover:bg-[#8B6D51] hover:text-[#FBF7F0] hover:border-[#8B6D51] hover:-translate-y-1 transition-all">

@@ -14,7 +14,7 @@ const Hero = () => {
             <div className="relative z-10 text-center max-w-6xl mx-auto px-6 flex flex-col items-center">
 
                 {/* Badge */}
-                <div className="animate-float mb-8">
+                <div className="animate-float mb-8" data-aos="fade-up" data-aos-delay="200">
                     <div className="bg-[#3E2723] text-[#FBF7F0] pl-6 pr-2 py-1.5 rounded-full border-2 border-[#3E2723] shadow-[4px_4px_0px_0px_#8B6D51] font-bold text-sm tracking-wide uppercase transform -rotate-2 inline-flex items-center gap-4">
                         {lang === 'EN' ? "A Woman's Touch" : "Sự Tinh Tế Phái Nữ"}
                         <span className="bg-[#DAB66E] text-[#3E2723] px-3 py-1 rounded-full text-xs font-black">DA NANG</span>
@@ -22,7 +22,7 @@ const Hero = () => {
                 </div>
 
                 {/* Main Title */}
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-[#3E2723] leading-[1.1] mb-6 relative group cursor-default">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-[#3E2723] leading-[1.1] mb-6 relative group cursor-default" data-aos="fade-up" data-aos-delay="400">
                     {lang === 'EN' ? "Private Nature Journeys" : "Hành Trình Gần Gũi Thiên Nhiên"}
                     <br />
                     <span className="font-serif italic text-[#8B6D51] relative inline-block">
@@ -32,7 +32,7 @@ const Hero = () => {
                 </h1>
 
                 {/* Subtitle */}
-                <div className="mt-6 mb-12 relative">
+                <div className="mt-6 mb-12 relative" data-aos="fade-up" data-aos-delay="600">
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#A67C52] to-transparent h-[1px] top-1/2 -z-10 opacity-50"></div>
                     <div className="bg-[#FBF7F0] px-6 inline-block relative">
                         <p className="text-xl md:text-2xl font-medium tracking-tight text-[#3E2723]/80">
@@ -42,7 +42,7 @@ const Hero = () => {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-20">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center relative z-20" data-aos="fade-up" data-aos-delay="800">
                     <a href="#booking" className="bg-[#3E2723] text-[#FBF7F0] px-8 py-4 rounded-full text-xl font-bold hard-shadow hard-shadow-hover transition-all flex items-center gap-3 group">
                         {lang === 'EN' ? "Book Private Experience" : "Đặt Trải Nghiệm Riêng Tư"}
                         <iconify-icon icon="solar:stars-bold" className="text-[#A67C52] group-hover:rotate-180 transition-transform duration-500" width="24"></iconify-icon>
@@ -55,7 +55,7 @@ const Hero = () => {
             </div>
 
             {/* Floating Cards Decoration */}
-            <div className="absolute bottom-20 left-10 md:left-20 animate-float hidden lg:block z-20">
+            <div className="absolute bottom-20 left-10 md:left-20 animate-float hidden lg:block z-20" data-aos="fade-right" data-aos-delay="1000">
                 <div className="bg-[#FFFFFF] p-2 pb-6 rounded-lg hard-shadow-sm rotate-[-6deg] w-48">
                     <div className="bg-[#8B6D51] h-40 rounded mb-2 flex items-center justify-center overflow-hidden relative">
                         <img src="/images/hero_picnic_1772269228827.png" className="w-full h-full object-cover grayscale mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" alt="Family Picnic" />
@@ -63,7 +63,7 @@ const Hero = () => {
                     <div className="font-serif italic text-center text-sm font-bold text-[#3E2723]">{lang === 'EN' ? "Family Picnic" : "Picnic Gia Đình"}</div>
                 </div>
             </div>
-            <div className="absolute top-40 right-10 md:right-20 animate-float-delayed hidden lg:block z-20">
+            <div className="absolute top-40 right-10 md:right-20 animate-float-delayed hidden lg:block z-20" data-aos="fade-left" data-aos-delay="1200">
                 <div className="bg-[#FFFFFF] p-2 pb-6 rounded-lg hard-shadow-sm rotate-[12deg] w-40">
                     <div className="bg-[#DAB66E] h-28 rounded mb-2 flex items-center justify-center">
                         <iconify-icon icon="solar:sunset-bold" className="text-[#FBF7F0] text-5xl"></iconify-icon>
