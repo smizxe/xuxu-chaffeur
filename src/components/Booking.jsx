@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyfhTzDEZXLPDyM3fhn_KMQ0cpTIF5T185qwoDiwLvWOuggNgMJcWVE_8KTTH1hHfuQTA/exec";
+const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
 const Booking = () => {
     const { lang } = useLanguage();
